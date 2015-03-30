@@ -35,8 +35,11 @@ p {
 header {
 	text-align: center;
 	position: relative;
-	height: 100vh;
 	z-index: 1;
+	min-height: 300px;
+}
+.full-height {
+	height: 100vh;
 }
 header:before, header:after {
 	content: '';
@@ -74,6 +77,42 @@ header a:link:after {
 	max-width: 1100px;
 	margin: 0 auto;
 	padding: 8px;
+	padding-top: 0;
+	text-align: center;
+}
+
+.main-nav {
+	background: radial-gradient(ellipse, #222, #111);
+}
+
+.main-nav ul {
+	list-style: none;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+.main-nav li {
+	flex: 1;
+	text-align: center;
+	font-family: Ubuntu;
+}
+.main-nav a {
+	padding: 12px;
+	display: block;
+}
+.main-nav a:hover, .main-nav a:active {
+	background: RGBA(202, 95, 51, 0.1);
+}
+.main-nav a:after {
+	display: none;
+}
+
+.seriously-now {
+
 }
 
 .side-by-side {
@@ -83,7 +122,7 @@ header a:link:after {
 	padding-top: 30px;
 	height: 0;
 	overflow: auto;
-margin: 0 auto;
+	margin: 0 auto;
 }
 
 iframe {
@@ -98,11 +137,13 @@ h1 {
 	position: relative;
 	font-family: Cookie;
 	display: inline-block;
-	background: #1DB9C3;
 	color: #CA5F33;
 	padding: 8px;
 	font-weight: normal;
 	border-radius: 3px;
+}
+.top-head {
+	background: #1DB9C3;
 }
 h1 div {
 	font-family: Ubuntu;
@@ -158,17 +199,17 @@ img {
 	src: local("Ubuntu Bold"), local("Ubuntu-Bold"), url(http://fonts.gstatic.com/s/ubuntu/v7/0ihfXUL2emPh0ROJezvraJBw1xU1rKptJj_0jans920.woff2) format("woff2"), url(http://fonts.gstatic.com/s/ubuntu/v7/0ihfXUL2emPh0ROJezvraLO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-	header {
+	.full-height {
 		height: 1024px;
 	}
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
-	header {
+	.full-height {
 		height: 768px;
 	}
 }
 @media screen and (device-aspect-ratio: 40 / 71) {
-	header {
+	.full-height {
 		height: 450px;
 	}
 }
