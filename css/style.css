@@ -36,10 +36,15 @@ header {
 	text-align: center;
 	position: relative;
 	z-index: 1;
-	min-height: 300px;
+	min-height: 250px;
 }
 .full-height {
 	height: 100vh;
+}
+.large-header {
+	font-size: 6em;
+	background: RGBA(29, 185, 195, 0.8);
+	text-shadow: 0 2px 0 #1DB9C3;
 }
 header:before, header:after {
 	content: '';
